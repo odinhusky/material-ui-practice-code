@@ -1,0 +1,13 @@
+# 首先必續安裝 date-fns
+
+  $ npm install date-fns
+
+# 在需要的 component 最上方引入 format 的方法
+
+  import { format } from 'date-fns'
+
+# 使用方法
+
+  { format(new Date(), 'do MMMM Y')}
+
+透過以上的設定就可以得到特定的時間格式

@@ -1,0 +1,11 @@
+# 首先必續安裝全局的 json-server
+
+  $ npm install -g json-server
+
+# 在專案根目錄建立 data/db.json 並且建立一些內容
+
+# 叫 json-server 監聽特定的 json 檔案
+
+  $ json-server --watch data/db.json --port 8000
+
+透過以上的設定就可以利用非同步的方式針對該json檔案的內容作取得(GET | POST)
