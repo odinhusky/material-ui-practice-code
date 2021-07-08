@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     marginLeft: theme.spacing(2)
-  }
+  },
 }))
 
 export default function Layout({ children }) {

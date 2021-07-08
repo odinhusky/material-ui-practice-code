@@ -5,6 +5,7 @@ import Layout from './component/Layout'
 
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+
 import { blue, green, purple } from '@material-ui/core/colors';
 
 
@@ -19,7 +20,7 @@ const theme = createMuiTheme({
     // 直接這樣使用色票就可以不用一個一個設定 light | main | dark | contrastColor
     primary: blue,
     secondary: purple,
-    odin: green,
+    odin: '#ffffff'
   },
 
   //字體設定
@@ -30,25 +31,40 @@ const theme = createMuiTheme({
     fontWeightRegular: 500,
     fontWeightMedium: 600,
     fontWeightBold: 1000
-  }
+  },
+
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1280,
+      xl: 1500,
+      odin: 1700,
+      xxl: 1920,
+    },
+  },
 })
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Layout>
-          <Switch>
-            <Route exact path="/">
-              <Notes />
-            </Route>
-            <Route path="/create">
-              <Create />
-            </Route>
-          </Switch>
-        </Layout>
-      </Router>
+      {/* <ThemeProvider theme={addNewTheme}> */}
+        <Router>
+          <Layout>
+            <Switch>
+              <Route exact path="/">
+                <Notes />
+              </Route>
+              <Route path="/create">
+                <Create />
+              </Route>
+            </Switch>
+          </Layout>
+        </Router>
+      {/* </ThemeProvider> */}
     </ThemeProvider>
+
   );
 }
 
